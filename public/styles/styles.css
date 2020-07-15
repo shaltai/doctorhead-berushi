@@ -27,7 +27,7 @@
   color: #161616;
 }
 
-.lnd-card__text, .lnd-step__text, .lnd-city__schedule, .lnd-hero__text, .lnd-hero__text-athlet, .lnd-hero__text-molding, .lnd-advantages__list, .lnd-choice__list, .lnd-city__text {
+.lnd-card__text, .lnd-step__text, .lnd-city__schedule, .lnd-hero__text, .lnd-hero__text-athlet, .lnd-hero__text-molding, .lnd-advantages__list, .lnd-choice__list, .lnd-city__text, .lnd-city__phone, .lnd-city__whatsapp, .lnd-city__telegram {
   font-weight: 400;
 }
 
@@ -41,7 +41,7 @@
   line-height: 3rem;
 }
 
-.lnd-hero__text, .lnd-hero__text-athlet, .lnd-hero__text-molding, .lnd-card__text, .lnd-advantages__list, .lnd-choice__list, .lnd-step__text, .lnd-city__schedule, .lnd-city__text {
+.lnd-hero__text, .lnd-hero__text-athlet, .lnd-hero__text-molding, .lnd-card__text, .lnd-advantages__list, .lnd-choice__list, .lnd-step__text, .lnd-city__schedule, .lnd-city__text, .lnd-city__phone, .lnd-city__whatsapp, .lnd-city__telegram {
   color: #595A5A;
 }
 
@@ -88,35 +88,37 @@ input[type=submit] {
   color: #595A5A;
 }
 
-input {
+input.lnd-input {
   height: 5rem;
   font-size: 1.5rem;
   line-height: 1;
   border: none;
 }
 
-input[type=text] {
+input[type=text].lnd-input {
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 0.2rem solid #595A5A;
   background-color: transparent;
 }
 
-input[type=text]:hover {
+input[type=text]:hover.lnd-input {
   border-bottom: 0.2rem solid #161616;
   transition: border-bottom .5s ease-out;
 }
 
-input[type=text]:focus {
+input[type=text]:focus.lnd-input {
+  outline: none;
   border-bottom: 0.2rem solid #00AEFF;
   transition: border-bottom .5s ease-out;
 }
 
-input::placeholder {
+input::placeholder.lnd-input {
   color: #595A5A;
 }
 
 input[type=submit] {
+  border: none;
   cursor: pointer;
 }
 
@@ -125,11 +127,6 @@ input[type=submit]:hover {
   transition: background-color .5s ease-out;
   box-shadow: 0 0.5rem 0.5rem rgba(0, 115, 168, 0.24), 0 0 0.5rem rgba(0, 115, 168, 0.12);
   transition: all .5s ease-out;
-}
-
-.lnd-catalog-bot__card {
-  display: flex;
-  flex-direction: column;
 }
 
 @font-face {
@@ -191,8 +188,13 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
   font-variant-numeric: lining-nums;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .lnd-container {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -255,18 +257,6 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
   grid-area: text-molding;
 }
 
-@supports (-webkit-appearance: none) {
-  .lnd-hero__banner {
-    background-image: image-set(url(../img/photo-hero_bkg.min.webp) 1x, url(../img/photo-hero_bkg@2x.min.webp) 2x);
-  }
-}
-
-@media (min-resolution: 2dppx) {
-  .lnd-hero__banner {
-    background-image: url(../img/photo-hero_bkg@2x.min.webp);
-  }
-}
-
 .lnd-catalog-top {
   position: relative;
   display: grid;
@@ -275,29 +265,35 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
   grid-template-rows: 58.5rem 58.5rem 39rem 39rem;
 }
 
-.lnd-card__swim {
-  grid-area: card-swim;
+.lnd-catalog-top_volume-1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
-.lnd-card__sleep {
-  grid-area: card-sleep;
-}
-
-.lnd-card__factory {
-  grid-area: card-factory;
-}
-
-.lnd-card__plane {
-  grid-area: card-plane;
-}
-
-.lnd-card {
+.lnd-card, .lnd-card_vertical, .lnd-card_horizontal {
   display: flex;
   background-color: white;
 }
 
-.lnd-card__info {
+.lnd-card_vertical {
+  flex-direction: column;
+}
+
+.lnd-card_horizontal {
+  flex-direction: row;
+}
+
+.lnd-card__info, .lnd-card__info_horizontal, .lnd-card__info_vertical {
   position: relative;
+}
+
+.lnd-card__info_horizontal {
+  width: 50%;
+}
+
+.lnd-card__info_vertical {
+  width: 100%;
 }
 
 .lnd-card__info_large {
@@ -316,18 +312,37 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
   margin-bottom: 3rem;
 }
 
-.lnd-price {
-  margin-bottom: 4rem;
-  font-size: 1.5rem;
-  color: #161616;
+.lnd-card__image {
+  width: max-content;
 }
 
-.lnd-price__single {
-  font-weight: 900;
+.lnd-card__swim {
+  grid-area: card-swim;
 }
 
-.lnd-price__pair {
-  font-weight: 400;
+.lnd-card__sleep {
+  grid-area: card-sleep;
+}
+
+.lnd-card__factory {
+  grid-area: card-factory;
+}
+
+.lnd-card__plane {
+  grid-area: card-plane;
+}
+
+.lnd-card__shoot {
+  grid-area: card-shoot;
+}
+
+.lnd-card__musician {
+  grid-area: card-musician;
+  z-index: 1;
+}
+
+.lnd-card__custom {
+  grid-area: card-custom;
 }
 
 .lnd-card__swim_star-1 {
@@ -342,10 +357,18 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
   bottom: 0;
 }
 
-.lnd-catalog-top_volume-1 {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+.lnd-price {
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  color: #161616;
+}
+
+.lnd-price__single {
+  font-weight: 900;
+}
+
+.lnd-price__pair {
+  font-weight: 400;
 }
 
 .lnd-catalog-bot {
@@ -400,19 +423,6 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
   width: 39rem;
 }
 
-.lnd-card__shoot {
-  grid-area: card-shoot;
-}
-
-.lnd-card__musician {
-  grid-area: card-musician;
-  z-index: 1;
-}
-
-.lnd-card__custom {
-  grid-area: card-custom;
-}
-
 .lnd-advantages {
   position: relative;
   display: grid;
@@ -420,8 +430,8 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 78rem;
   margin-bottom: 19.5rem;
-  background-image: url(/img/photo-advantages.min.jpg);
-  background-image: -webkit-image-set(url(/img/photo-advantages.min.jpg) 1x, url(/img/photo-advantages@2x.min.jpg) 2x);
+  background-image: url(../img/photo-advantages.min.jpg);
+  background-image: -webkit-image-set(url(../img/photo-advantages.min.jpg) 1x, url(../img/photo-advantages@2x.min.jpg) 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -461,18 +471,6 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
   height: 19.5rem;
   bottom: 0;
   right: 0;
-}
-
-@supports (-webkit-appearance: none) {
-  .lnd-advantages {
-    background-image: image-set(url(/img/photo-advantages.min.webp) 1x, url(/img/photo-advantages@2x.min.webp) 2x);
-  }
-}
-
-@media (min-resolution: 2dppx) {
-  .lnd-advantages {
-    background-image: url(/img/photo-advantages@2x.min.webp);
-  }
 }
 
 .lnd-choice {
@@ -543,12 +541,12 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
   justify-content: flex-end;
 }
 
-.lnd-consultation__input-name {
+.lnd-consultation__name {
   width: 40rem;
   margin-right: 4rem;
 }
 
-.lnd-consultation__input-phone {
+.lnd-consultation__phone {
   width: 33rem;
   margin-bottom: 5rem;
 }
@@ -713,5 +711,6 @@ a, body, dd, dl, dt, form, h1, h2, h3, h4, li, p, ul {
 }
 
 .lnd-city__phone, .lnd-city__whatsapp, .lnd-city__telegram {
+  font-weight: 600;
   text-decoration: underline;
 }
