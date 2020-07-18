@@ -391,22 +391,6 @@ img {
   }
 }
 
-@media (max-width: 768px) {
-  .lnd-catalog-top {
-    grid-template-areas: 'card-swim card-swim card-swim card-swim card-swim card-swim' 'card-sleep card-sleep card-sleep card-sleep card-sleep card-sleep' 'card-factory card-factory card-factory card-factory card-factory .' '. card-plane card-plane card-plane card-plane card-plane';
-    margin-bottom: 12.3rem;
-  }
-}
-
-@media (max-width: 414px) {
-  .lnd-catalog-top {
-    grid-template-areas: 'card-swim' 'card-sleep' 'card-factory' 'card-plane';
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content;
-    margin-bottom: 12.3rem;
-  }
-}
-
 .lnd-card, .lnd-card_vertical, .lnd-card_horizontal {
   display: flex;
   background-color: white;
@@ -500,102 +484,100 @@ img {
   }
 }
 
-.lnd-card__image__swim {
+.lnd-card__swim {
   grid-area: card-swim;
   margin-bottom: 19.5rem;
 }
 
 @media (max-width: 768px) {
-  .lnd-card__image__swim {
-    grid-area: card-swim;
+  .lnd-card__swim {
     margin-bottom: 12.3rem;
   }
 }
 
 @media (max-width: 414px) {
-  .lnd-card__image__swim {
+  .lnd-card__swim {
     flex-direction: column-reverse;
   }
 }
 
-.lnd-card__image__sleep {
+.lnd-card__sleep {
   grid-area: card-sleep;
   margin-bottom: 19.5rem;
 }
 
 @media (max-width: 768px) {
-  .lnd-card__image__sleep {
-    grid-area: card-sleep;
+  .lnd-card__sleep {
     margin-bottom: 12.3rem;
   }
 }
 
 @media (max-width: 414px) {
-  .lnd-card__image__sleep {
+  .lnd-card__sleep {
     flex-direction: column;
   }
 }
 
-.lnd-card__image__factory {
+.lnd-card__factory {
   grid-area: card-factory;
 }
 
 @media (max-width: 414px) {
-  .lnd-card__image__factory {
+  .lnd-card__factory {
     flex-direction: column-reverse;
   }
 }
 
-.lnd-card__image__plane {
+.lnd-card__plane {
   grid-area: card-plane;
 }
 
 @media (max-width: 768px) {
-  .lnd-card__image__plane {
+  .lnd-card__plane {
     flex-direction: row-reverse;
   }
 }
 
 @media (max-width: 414px) {
-  .lnd-card__image__plane {
+  .lnd-card__plane {
     flex-direction: column-reverse;
   }
 }
 
-.lnd-card__image__shoot {
+.lnd-card__shoot {
   grid-area: card-shoot;
 }
 
-.lnd-card__image__musician {
+.lnd-card__musician {
   grid-area: card-musician;
   z-index: 1;
 }
 
-.lnd-card__image__custom {
+.lnd-card__custom {
   grid-area: card-custom;
 }
 
-.lnd-card__image__swim_star-1 {
+.lnd-card__swim_star-1 {
   position: absolute;
   right: 0;
   bottom: -19.5rem;
 }
 
-.lnd-card__image__sleep_waves-1 {
+.lnd-card__sleep_waves-1 {
   position: absolute;
   left: 0;
   bottom: -19.5rem;
 }
 
 @media (max-width: 768px) {
-  .lnd-card__image__swim_star-1 {
+  .lnd-card__swim_star-1 {
     position: absolute;
     width: 12.3rem;
     height: 12.3rem;
     right: 0;
     bottom: -12.3rem;
   }
-  .lnd-card__image__sleep_waves-1 {
+  .lnd-card__sleep_waves-1 {
     position: absolute;
     width: 12.3rem;
     height: 12.3rem;
