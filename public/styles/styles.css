@@ -6,11 +6,13 @@
 .lnd-hero__heading {
   font-size: 6rem;
   letter-spacing: -0.1rem;
+  hyphens: none;
 }
 
 .lnd-advantages__heading, .lnd-choice__heading, .lnd-consultation__heading, .lnd-production__heading, .lnd-contacts__heading {
   font-size: 5rem;
   letter-spacing: -0.07rem;
+  hyphens: none;
 }
 
 @media (max-width: 414px) {
@@ -984,6 +986,7 @@ img {
   .lnd-advantages__heading {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -995,7 +998,7 @@ img {
 @media (max-width: 414px) {
   .lnd-advantages__list {
     padding-right: 1.5rem;
-    padding-left: 33vw;
+    padding-left: 1.5rem;
   }
 }
 
@@ -1058,7 +1061,7 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: max-content;
     padding-top: 10vh;
-    padding-bottom: 66vw;
+    padding-bottom: 33vw;
     background-size: contain, auto;
   }
 }
@@ -1112,7 +1115,7 @@ img {
 
 @media (max-width: 414px) {
   .lnd-choice__list {
-    padding-left: 33vw;
+    padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
@@ -1154,8 +1157,9 @@ img {
     position: absolute;
     width: 33vw;
     height: 33vw;
-    bottom: 33vw;
-    left: 0;
+    bottom: 0;
+    right: 0;
+    left: initial;
   }
 }
 
@@ -1358,7 +1362,7 @@ img {
 
 @media (max-width: 414px) {
   .lnd-production__step-2 {
-    margin-top: 35rem;
+    margin-top: 38rem;
   }
 }
 
@@ -1438,7 +1442,7 @@ img {
 
 @media (max-width: 1024px) {
   .lnd-digit-3 {
-    right: 0;
+    right: -50%;
   }
 }
 
@@ -1589,6 +1593,18 @@ img {
   background-image: url(../img/texture-regular.min.jpg);
 }
 
+@media (max-width: 768px) {
+  .lnd-contacts {
+    padding-bottom: 12.3rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .lnd-contacts {
+    padding-bottom: 25vw;
+  }
+}
+
 .lnd-contacts__heading {
   padding-left: 39rem;
   padding-right: 19.5rem;
@@ -1655,7 +1671,7 @@ img {
 
 @media (max-width: 414px) {
   .lnd-city__icon {
-    left: 3rem;
+    left: -0.5rem;
     height: 3rem;
   }
 }
@@ -1663,14 +1679,14 @@ img {
 @media (max-width: 414px) {
   .lnd-city__moscow {
     margin-bottom: 5rem;
-    padding-left: 7rem;
+    padding-left: 3.5rem;
     padding-right: 0;
   }
 }
 
 @media (max-width: 414px) {
   .lnd-city__spb {
-    padding-left: 7rem;
+    padding-left: 3.5rem;
     padding-right: 0;
   }
 }
